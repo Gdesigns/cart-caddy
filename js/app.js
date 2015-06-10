@@ -8,12 +8,12 @@ $(document).ready(function(){
 	if (item <= 0) {
 		alert ("Please add an item")
 	} else {
-		$("#shopping-list").append("<li>" + "<a class=remove>x</a>" + " " + item + "</li>");
+		$("#shopping-list").append("<li class=start>" + "<a class=remove>x</a>" + " " + item + "</li>");
 		$("input[name=item]").val("");
 	}
 	})
 	// The following changes the item to completed
-	$("li").click(function() {$(this).toggleClass("completed");});
+	$("ul").on('click', '.start', function() {$(this).toggleClass("completed");});
 	// The following removes the item from the list after it has been added
 	$("ul").on('click', '.remove', function() {$(this).closest("li").remove();});
 	// Resets the shopping list
