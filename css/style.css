@@ -1,0 +1,128 @@
+@charset "UTF-8";
+/* CSS Document */
+
+* {margin: 0; padding: 0;}
+html {-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+*, *:before, *:after {-webkit-box-sizing: inherit; -moz-box-sizing: inherit; box-sizing: inherit;}
+body {font-family: 'Open Sans', sans-serif; color: #464646; font-weight: 300;}
+header {
+	background: #464646;
+	padding: 1em;
+	text-align: center;
+}
+#logo {
+	display: block;
+	width: 60px; height: 60px;
+	float: left;
+}
+#search {
+	display: block;
+	width: 65%;
+	line-height: 60px;
+	float: right;
+}
+input.items {
+	width: 90%;
+	height: 30px;
+	padding: 5px;
+	margin-right: 5px;
+	border: 1px solid #d1d1d1;
+}
+.add {
+	display: inline-block;
+	width: 30px; height: 30px;
+	text-align: center;
+	background: #009177;
+	color: #ffffff;
+	border: 0;
+	cursor: pointer;
+}
+.content {
+	margin: 0;
+	padding: 0;
+}
+#shopping-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: 1.45em;
+}
+#shopping-list li {
+	display: block;
+	margin-bottom: 1px;
+	padding: 1em;
+	border-left: 10px solid #de5622;
+	background: #ececec;
+	position: relative;
+	cursor: pointer;
+}
+#shopping-list a {
+	display: block;
+	padding: 1em;
+	color: #464646;
+	text-decoration: none;
+}
+#shopping-list li.completed {
+	background: #ffffff;
+	border-left: 60px solid #009177;
+	font-style: italic;
+	position: relative;
+	color: #009177;
+	cursor: pointer;
+}
+#shopping-list li.completed:before {
+	position: absolute;
+	font-family: FontAwesome;
+	font-size: 1.5em;
+	top: .65em;
+	left: -1.35em;
+	content: "\f00c";
+	color: #ffffff;
+	font-style: normal;
+}
+.remove {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	color: #cccccc !important;
+	z-index: 10;
+	font-weight: 700;
+}
+.remove:hover {
+	color: #de5622 !important;
+	-o-transition:.5s; -ms-transition:.5s; -moz-transition:.5s; -webkit-transition:.5s; transition:.5s;
+}
+footer {
+	margin-top: 3px;
+}
+.reset {
+	display: block;
+	float: right;
+	width: 20%;
+	padding: .65em 0;
+	font-size: 1.45em;
+	text-align: center;
+	color: #fff;
+	background: #de5622;
+	text-decoration: none;
+}
+.reset:hover {
+	background: #464646;
+}
+.clear {clear: both; display: block; overflow: hidden; visibility: hidden; width: 0; height: 0;}
+.group:after {content: ""; display: table; clear: both;}
+
+@media screen and (max-width: 768px) {
+
+#logo {
+	margin: .5em auto;
+	float: none;
+}
+#search {
+	width: 90%;
+	margin: 0 auto;
+	float: none;
+}
+
+}
