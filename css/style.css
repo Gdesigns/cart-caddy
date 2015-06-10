@@ -88,6 +88,7 @@ input.items {
 	color: #cccccc !important;
 	z-index: 10;
 	font-weight: 700;
+	font-style: normal;
 }
 .remove:hover {
 	color: #de5622 !important;
@@ -123,6 +124,12 @@ footer {
 	width: 90%;
 	margin: 0 auto;
 	float: none;
+}
+input.items {
+	width: 75%;
+}
+.reset {
+	width: 50%;
 }
 
 }
